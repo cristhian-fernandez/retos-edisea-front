@@ -1,13 +1,160 @@
+html {
+  /* Variables globales */
+  --grey-100: #fbfdfe;
+  --grey-200: #f9fafb;
+  --grey-300: #ecf0f3;
+  --grey-400: #b7c1c8;
+  --grey-500: #8e9ba4;
+  --grey-600: #687782;
+  --grey-700: #273b49;
+  --grey-800: #28353e;
+  --grey-900: #192229;
+  
+  --first-color: #5f5cff;
+  --first-color-hover: #2a28bb;
+  --first-color-light: #9492ff;
+  --first-color-dark: #504dda;
+  
+  --second-color: #2bd480;
+  --second-color-hover: #31a069;
+  --second-color-light: #82f7bd;
+  --second-color-dark: #2ebd75;
+  
+  --third-color: #eb5656;
+  --third-color-hover: #c03939;
+  --third-color-light: #ef7676;
+  --third-color-dark: #d84646;
+  
+  --fourth-color: #ffba42;
+  --fourth-color-hover: #eb9c00;
+  --fourth-color-light: #ffc757;
+  --fourth-color-dark: #ffa600;
+  
+  --light-bg: #f0f0f0;
+  --dark-bg: #212e36;
+  
+  --border-radius: 0.5rem;
+  --white-color: #fff;
+  --black-color: #42535e;
+  /* --black-color: #2a3b47; */
+  
+  --bigger-font-size: 2.5rem;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5625rem;
+  --h3-font-size: 1.3125rem;
+  --h4-font-size: 1.0625rem;
+  --normal-font-size: 1.1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.8125rem;
+  
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /* Variables de color si el tema es nulo o light */
+  --background-color: var(--light-bg);
+  /* background-color: var(--light-bg); */
+  /* --title-color: var(--grey-800); */
+  --title-color: var(--first-color);
+  --text-color: var(--grey-700);
+  --border-color: var(--grey-300);
+
+  --heading-font: "Inter",sans-serif;
+  --body-font: "Manrope",sans-serif;
+  --icon-theme-color : var(--fourth-color);
+
+  --button-color: var(--first-color);
+  --button-color-hover: var(--first-color-hover);
+  --nav-bg:var(--first-color-dark);
+}
+
+html[data-theme="dark"] {
+  /* Variables de color si el tema es dark */
+  /* --background-color: var(--dark-bg); */
+  /* background-color: var(--dark-bg); */
+  --title-color: var(--grey-100);
+  --text-color: var(--grey-200);
+  --border-color: var(--grey-700);
+  --icon-theme-color : var(--first-color);
+
+  --background-color: radial-gradient(circle at left 50%,var(--dark-bg),var(--black-color));
+  --button-color: var(--third-color);
+  --button-color-hover: var(--third-color-hover);
+  --nav-bg: transparent;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+button{
+  font-family: var(--title-font);
+}
+
+h1{
+  font-size: var(--h1-font-size);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+p{
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: var(--body-font);
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+  height: 100vh;
+  width: 100%;
+  /* padding-left: 100px;
+  padding-right: 100px; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media only screen and (max-width: 650px) {
+  html{
+    --bigger-font-size: 2rem;
+    --body-padding-left: 30px;
+    --body-padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 650px) {
+  html{
+    --bigger-font-size: 2.2rem;
+    --body-padding-left: 50px;
+    --body-padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 950px) {
+  html{
+    --bigger-font-size: 2.5rem;
+    --body-padding-left: 100px;
+    --body-padding-right: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html{
+    --body-padding-left: 150px;
+    --body-padding-right: 150px;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  html{
+    --body-padding-left: 160px;
+    --body-padding-right: 160px;
+  }
 }

@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: var(--body-padding-left);
+    padding-right: var(--body-padding-right);
+    background-color: var(--nav-bg);
+}
+picture{
+    width: 150px;
+}
+
+picture img{
+    width: 100%;
+}

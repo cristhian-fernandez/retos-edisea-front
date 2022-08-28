@@ -1,0 +1,62 @@
+.banner_landing{
+    display: flex;
+    flex-direction: row;
+    padding-left: var(--body-padding-left);
+    padding-right: var(--body-padding-right);
+}
+.banner_landing h1{
+    font-size: var(--bigger-font-size);
+    font-weight: 900;
+}
+
+.banner_landing>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.banner_landing picture{
+    width: 30%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.banner_landing img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+    .banner_landing{
+        flex-direction: column;
+    }
+    .banner_landing>div{
+        width: 100%;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .banner_landing picture{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .banner_landing>div{
+        width: 60%;
+        padding-bottom: 0;
+        text-align: left;
+    }
+}
+@media only screen and (min-width: 850px) {
+    .banner_landing>div{
+        width: 70%;
+        padding-bottom: 0;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .banner_landing>div{
+        width: 50%;
+        padding-bottom: 0;
+    }
+}
