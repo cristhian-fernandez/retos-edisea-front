@@ -9,6 +9,16 @@ html {
   --grey-700: #273b49;
   --grey-800: #28353e;
   --grey-900: #192229;
+
+  --blue-100: #e2f1fd;
+  --blue-200: #a4d6f9;
+  --blue-300: #88c8f7;
+  --blue-400: #62b7f4;
+  --blue-500: #1192ee;
+  --blue-600: #0f80d2;
+  --blue-700: #0c6cb0;
+  --blue-800: #063251;
+  --blue-900: #162936;
   
   --first-color: #5f5cff;
   --first-color-hover: #2a28bb;
@@ -67,22 +77,30 @@ html {
 
   --button-color: var(--first-color);
   --button-color-hover: var(--first-color-hover);
-  --nav-bg:var(--first-color-dark);
+  --nav-bg: var(--first-color-dark);
+  --content-bg : var(--first-color);
+  --card-bg: var(--grey-100);
+  --border-card : var(--grey-300);
+  --border-top-card-color: var(--first-color);
+  --box-shadow-color: var(--grey-400);
 }
 
 html[data-theme="dark"] {
   /* Variables de color si el tema es dark */
-  /* --background-color: var(--dark-bg); */
-  /* background-color: var(--dark-bg); */
   --title-color: var(--grey-100);
   --text-color: var(--grey-200);
   --border-color: var(--grey-700);
   --icon-theme-color : var(--first-color);
 
   --background-color: radial-gradient(circle at left 50%,var(--dark-bg),var(--black-color));
-  --button-color: var(--third-color);
-  --button-color-hover: var(--third-color-hover);
+  --button-color: var(--blue-700);
+  --button-color-hover: var(--blue-500);
   --nav-bg: transparent;
+  --content-bg : var(--blue-700);
+  --card-bg: var(--blue-700);
+  --border-card : var(--grey-700);
+  --border-top-card-color: var(--blue-800);
+  --box-shadow-color: var(--grey-700);
 }
 
 h1, h2, h3, h4, h5 {
@@ -98,6 +116,14 @@ h1{
   font-size: var(--h1-font-size);
   font-weight: 700;
   margin-bottom: 10px;
+}
+h2{
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+}
+h3{
+  font-size: var(--h3-font-size);
+  font-weight: 500;
 }
 
 p{
@@ -116,8 +142,6 @@ body {
   background: var(--background-color);
   height: 100vh;
   width: 100%;
-  /* padding-left: 100px;
-  padding-right: 100px; */
 }
 
 code {
@@ -125,11 +149,16 @@ code {
     monospace;
 }
 
+.text-content{
+  font-size: var(--normal-font-size);
+}
+
 @media only screen and (max-width: 650px) {
   html{
     --bigger-font-size: 2rem;
     --body-padding-left: 30px;
     --body-padding-right: 30px;
+    --normal-font-size: 1rem;
   }
 }
 @media only screen and (min-width: 650px) {

@@ -1,3 +1,4 @@
+/* Estilos Banner */
 .banner_landing{
     display: flex;
     flex-direction: row;
@@ -42,6 +43,10 @@
 }
 
 @media only screen and (min-width: 650px) {
+    .banner_landing{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .banner_landing>div{
         width: 60%;
         padding-bottom: 0;
@@ -58,5 +63,131 @@
     .banner_landing>div{
         width: 50%;
         padding-bottom: 0;
+    }
+}
+
+/* Estilos Content */
+.content{
+    background: var(--content-bg);
+    padding-left: var(--body-padding-left);
+    padding-right: var(--body-padding-right);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.content p, .content h2,.content h3{
+    color: var(--white-color);
+}
+
+.content h2{
+    position: relative;
+    z-index: 2;
+    line-height: 1.2;
+}
+
+.underlined{
+    height: 8px;
+    width: 80%;
+    background-color: var(--fourth-color-dark);
+    position: relative;
+    top: -15px;
+    z-index: 0;
+    margin: auto;
+}
+
+.content_seccion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.content_seccion>div{
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.content_seccion img{
+    margin-bottom: 10px;
+}
+@media only screen and (min-width: 650px) {
+    .underlined{
+        height: 12px;
+        width: 70%;
+        top: -16px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .content_seccion{
+        flex-direction: row;
+    }
+    .content .underlined{
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .underlined{
+        height: 12px;
+        width: 60%;
+    }
+    .content_seccion>div{
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 1450px) {
+    .underlined{
+        height: 12px;
+        width: 50%;
+    }
+    .content_seccion>div{
+        width: 30%;
+    }
+}
+@media only screen and (min-width: 1550px) {
+    .underlined{
+        height: 12px;
+        width: 40%;
+    }
+}
+
+/* Estilos steps */
+.steps{
+    /* background: var(--content-bg); */
+    padding-left: var(--body-padding-left);
+    padding-right: var(--body-padding-right);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.steps_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.steps_number{
+    background-color: var(--border-top-card-color);
+    border-radius: 50%;
+    padding: 1px 10px;
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+    color:#fff;
+}
+
+@media only screen and (min-width: 900px) {
+    .steps_list{
+        flex-direction: row;
     }
 }

@@ -1,0 +1,11 @@
+.card{
+    border:1px solid var(--border-card);
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-top: 5px solid var(--border-top-card-color);
+    box-shadow: 3px 3px 6px var(--box-shadow-color);
+    margin-left: 10px;
+    margin-right: 10px;
+}
