@@ -80,22 +80,6 @@
     color: var(--white-color);
 }
 
-.content h2{
-    position: relative;
-    z-index: 2;
-    line-height: 1.2;
-}
-
-.underlined{
-    height: 8px;
-    width: 80%;
-    background-color: var(--fourth-color-dark);
-    position: relative;
-    top: -15px;
-    z-index: 0;
-    margin: auto;
-}
-
 .content_seccion{
     display: flex;
     flex-direction: column;
@@ -118,13 +102,13 @@
 .content_seccion img{
     margin-bottom: 10px;
 }
-@media only screen and (min-width: 650px) {
+/* @media only screen and (min-width: 650px) {
     .underlined{
         height: 12px;
         width: 70%;
         top: -16px;
     }
-}
+} */
 
 @media only screen and (min-width: 900px) {
     .content_seccion{

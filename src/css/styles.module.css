@@ -20,3 +20,52 @@
     margin-bottom: 10px;
     margin-top: 0;
 }
+
+/* ScrollBar Styling */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #697ca2;
+}
+
+.underlinedTitle{
+    display: inline-block;
+}
+
+.underlinedTitle h2{
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    z-index: var(--z-tooltip);
+    line-height: 1.2;
+}
+
+.underlined{
+    height: 8px;
+    background-color: var(--fourth-color-dark);
+    position: relative;
+    top: -15px;
+    z-index: var(--z-normal);
+    margin: auto;
+}
+
+@media only screen and (min-width: 650px) {
+    .underlined{
+        height: 12px;
+        top: -16px;
+    }
+}
+
+
+

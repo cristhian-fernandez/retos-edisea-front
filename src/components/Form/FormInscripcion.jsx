@@ -6,7 +6,7 @@ import ButtonMain from "../Button/ButtonMain";
 import stylesMain from './../../css/styles.module.css';
 import styles from './Form.module.css';
 
-function FormInscripcion() {
+function FormInscripcion(props) {
     const countries = useSelector((state) => state.countries);
     const ages = getAges ();
     let navigate = useNavigate();
@@ -76,7 +76,7 @@ function FormInscripcion() {
                 lastname: "",
                 age: "0",
                 email: "",
-                country: "",
+                country: "Perú",
                 phone: ""
             });
 
@@ -90,10 +90,10 @@ function FormInscripcion() {
             if(error.phone) return alert(error.phone);
         };
     };
-
+    
     return (
         <div className={styles.form}>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} id={'form_inscripcion'} ref={props.referencia}>
                 <input 
                     type="text" 
                     name='name'
@@ -164,9 +164,7 @@ function FormInscripcion() {
 
                     <p className={stylesMain.danger}>{error.phone}</p>
                 </div>
-
-
-                <ButtonMain />
+                <ButtonMain titleButton = 'Inscribirme ahora'/>
             </form>
         </div>
     );

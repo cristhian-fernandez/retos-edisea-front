@@ -48,6 +48,16 @@
     margin-bottom: 0;
 }
 
+.form button{
+    background-color: var(--third-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.form button:hover{
+    background-color: var(--third-color-hover);
+}
 @media only screen and (min-width: 500px) {
     .form{
         display: flex;

@@ -3,6 +3,7 @@ import './App.css';
 import LandingSistemas from './views/LandingPage/LandingSistemas';
 import PageNotFound from './views/PageNotFound/PageNotFound';
 import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route exact path='/' element={<LandingSistemas />} />
         <Route path="*" element={<PageNotFound />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }
