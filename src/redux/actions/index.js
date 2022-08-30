@@ -32,3 +32,10 @@ export const getCountries = () => {
         .catch( e => console.log(e)); 
     }
 }
+
+export const createInscription = (values) => {
+    return async () => {
+        axios.post(url + '/student', values)
+        .catch( e => console.log(e));
+    }
+}

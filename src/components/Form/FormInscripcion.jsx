@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { getCountries } from "../../redux/actions";
+import { createInscription, getCountries } from "../../redux/actions";
 import ButtonMain from "../Button/ButtonMain";
 import stylesMain from './../../css/styles.module.css';
 import styles from './Form.module.css';
+import ModalAlert from "../Modal/ModalAlert";
+import ModalConfirm from "../Modal/ModalConfirm";
 
-function FormInscripcion(props) {
+function FormInscripcion({referencia}) {
     const countries = useSelector((state) => state.countries);
+    const [showModalAlert, setShowModalAlert] = useState(false);
+    const [showModalConfirm, setShowModalConfirm] = useState(false);
+    const [messageAlert, setMessageAlert] = useState('');
+    const [dataModalConfirm, setDataModalConfirm] = useState('');
+
     const ages = getAges ();
-    let navigate = useNavigate();
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -58,19 +63,30 @@ function FormInscripcion(props) {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        const date = new Date();
         if(Object.entries(error).length === 0){
-            const newEmail = {
+
+            let linkWhatsapp = `https://api.whatsapp.com/send?phone=+51951420376&text=Hola%20soy%20${getName(input.name)}%20y%20quer%C3%ADa%20confirmar%20mi%20inscripci%C3%B3n%20al%20reto%20de%20sistemas.`;
+
+            const newInscription = {
                 name: input.name,
                 lastname: input.lastname,
                 age: input.age,
                 email: input.email,
                 country: input.country,
-                phone: input.phone
+                phone: input.phone,
+
+                date : date.toISOString().split('T')[0],
+                idcountry : getCodeCountry(input.country).id,
+                idcareers : ['1']
             };
-            console.log('newEmail',newEmail);
-            // dispatch(sendEmailContact(newEmail));
-            navigate('/');
-            alert('Gracias por el mensaje, responderemos lo más breve posible')
+            const dataModal = {
+                name: getName(input.name),
+                link : linkWhatsapp
+            }
+            // dispatch(createInscription(newInscription));
+            setDataModalConfirm(dataModal);
+            setShowModalConfirm(true);
             setInput({
                 name: "",
                 lastname: "",
@@ -79,21 +95,24 @@ function FormInscripcion(props) {
                 country: "Perú",
                 phone: ""
             });
+            setError({
+                name: "",
+                lastname: "",
+                age: "",
+                email: "",
+                country: "",
+                phone: ""
+            });
 
         }else{
-            if(input.name === '') return alert('Ingrese su nombre');
-            if(error.name) return alert(error.name);
-            if(error.lastname) return alert(error.lastname);
-            if(error.age) return alert(error.age);
-            if(error.email) return alert(error.email);
-            if(error.country) return alert(error.country);
-            if(error.phone) return alert(error.phone);
+            if(input.name === '') setMessageAlert('* Ingrese su nombre')
+            else setMessageAlert(error[Object.keys (error)[0]]);
+            setShowModalAlert(true);
         };
     };
-    
     return (
         <div className={styles.form}>
-            <form onSubmit={onSubmit} id={'form_inscripcion'} ref={props.referencia}>
+            <form onSubmit={onSubmit} ref={referencia}>
                 <input 
                     type="text" 
                     name='name'
@@ -165,6 +184,8 @@ function FormInscripcion(props) {
                     <p className={stylesMain.danger}>{error.phone}</p>
                 </div>
                 <ButtonMain titleButton = 'Inscribirme ahora'/>
+                <ModalAlert show={showModalAlert} setShow={setShowModalAlert} modalBody={messageAlert}/> 
+                <ModalConfirm show={showModalConfirm} setShow={setShowModalConfirm} modalBody={dataModalConfirm}/> 
             </form>
         </div>
     );
@@ -213,4 +234,9 @@ export function getAges (){
         'mayor de 20 años',
     ];
     return ages;
+};
+
+export function getName(name) {
+    let firstName = name.split(' ')[0];
+    return firstName.charAt(0).toUpperCase() + firstName.slice(1);
 }

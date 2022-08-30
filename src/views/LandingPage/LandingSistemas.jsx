@@ -5,7 +5,8 @@ import group from './../../assets/group.png';
 import computer from './../../assets/computer.png';
 import ButtonMain from '../../components/Button/ButtonMain';
 import FormInscripcion from '../../components/Form/FormInscripcion';
-import { useRef } from 'react';
+import { useRef} from 'react';
+
 function LandingSistemas() {
     let refInscripcion = useRef();
     return (

@@ -1,0 +1,84 @@
+.modalHeader{
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.modalTitle , .modalTitle h3{
+    font-size: var(--h3-font-size);
+    color: var(--third-color);
+}
+.modalTitle{
+    display: flex;
+}
+.modalTitle h3{
+    margin-left: 5px;
+}
+
+.modalHeader button{
+    background-color: var(--third-color);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 0px 7px 5px 7px ;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--white-color);
+    position: relative;
+    top: -10px;
+    left: 10px;
+    border: 1px solid var(--third-color);
+}
+
+.modalBody{
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    color: var(--blue-700);
+    font-weight: 500;
+}
+.modalFooter{
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    padding-top: 0;
+    border-top: 0;
+}
+.modalButton{
+    background-color:var(--third-color);
+    border-color: var(--third-color);
+}
+.modalButton:hover{
+    background-color:var(--third-color-hover);
+    border-color: var(--third-color-hover);
+}
+
+/*Estilos Modal Confirmar*/
+.modalConfirmTitle{
+    color: var(--second-color-hover);
+}
+.modalConfirmTitle h3{
+    color: var(--second-color-hover);
+}
+.modalConfirmHeader button{
+    background-color: var(--second-color-hover);
+    border: 1px solid var(---second-color-hover);
+}
+.modalConfirmBody, .modalConfirmBody p{
+    color: var(--blue-800);
+}
+.modalConfirmButton{
+    background-color:transparent;
+    border-color: var(--second-color-hover);
+    color: var(--second-color-hover);
+    font-weight: 600;
+}
+.modalConfirmButton:hover{
+    background-color:var(--second-color-dark);
+    border-color: var(--second-color-dark);
+}
+.modalConfirmButton span{
+    font-size: var(--h3-font-size);
+    margin-right: 3px;
+}
