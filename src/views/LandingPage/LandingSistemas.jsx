@@ -1,9 +1,10 @@
 import styles from './LandingSistemas.module.css';
-import stylesCard from './../../css/styles.module.css';
+import stylesMain from './../../css/styles.module.css';
 import banner_img from './../../assets/banner_img.png';
 import group from './../../assets/group.png';
 import computer from './../../assets/computer.png';
 import ButtonMain from '../../components/Button/ButtonMain';
+import FormInscripcion from '../../components/Form/FormInscripcion';
 function LandingSistemas() {
     return (
         <div className={styles.LandingSistemas}>
@@ -40,23 +41,24 @@ function LandingSistemas() {
                 <h2>¿Como aplicar?</h2>
                 <p>Demuéstranos que te comprometes en aprender esta carrera y nosotros te ayudamos a despegar tus conocimientos en programación.</p>
                 <div className={styles.steps_list}>
-                    <div className={stylesCard.card}>
+                    <div className={stylesMain.card}>
                         <h3><span className={styles.steps_number}>1</span>Aplica</h3>
                         <p>Empieza por hacer click en el botón Aplica. No es necesario que tengas conocimientos previos.</p>
                     </div>
-                    <div className={stylesCard.card}>
+                    <div className={stylesMain.card}>
                         <h3><span className={styles.steps_number}>2</span>Prep. Curso</h3>
                         <p>Accede al Curso de Preparación de 2 semanas que te ayudara a prepararte para el Edisea Challenge.</p>
                     </div>
-                    <div className={stylesCard.card}>
+                    <div className={stylesMain.card}>
                         <h3><span className={styles.steps_number}>3</span>Reto Challenge</h3>
                         <p>Rinde el Reto Sistemas Challenge, un examen de conocimientos para que pongas en practica lo aprendido en el Prep. Curso.</p>
                     </div>
                 </div>
             </div>
             <div className={styles.inscripcion}>
-                {/* <h2>¿Listo para aprender a programar? </h2>
-                <h3>Inscríbete</h3> */}
+                <h2>¿Listo para aprender a programar? </h2>
+                <h4>Inscríbete</h4>
+                <FormInscripcion />
             </div>
         </div>
     );

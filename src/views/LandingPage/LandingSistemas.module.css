@@ -161,11 +161,10 @@
 
 /* Estilos steps */
 .steps{
-    /* background: var(--content-bg); */
     padding-left: var(--body-padding-left);
     padding-right: var(--body-padding-right);
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -190,4 +189,12 @@
     .steps_list{
         flex-direction: row;
     }
+}
+
+.inscripcion{
+    padding-left: var(--body-padding-left);
+    padding-right: var(--body-padding-right);
+    padding-top: 0px;
+    padding-bottom: 20px;
+    text-align: center;
 }

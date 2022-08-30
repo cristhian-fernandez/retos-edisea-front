@@ -44,6 +44,7 @@ html {
   --dark-bg: #212e36;
   
   --border-radius: 0.5rem;
+  --form-border-radius:  0.25rem;
   --white-color: #fff;
   --black-color: #42535e;
   /* --black-color: #2a3b47; */
@@ -54,8 +55,9 @@ html {
   --h3-font-size: 1.3125rem;
   --h4-font-size: 1.0625rem;
   --normal-font-size: 1.1rem;
+  --text-font-size: 1em;
   --small-font-size: 0.875rem;
-  --smaller-font-size: 0.8125rem;
+  --smaller-font-size: 0.75rem;
   
   --z-back: -10;
   --z-normal: 1;
@@ -83,6 +85,7 @@ html {
   --border-card : var(--grey-300);
   --border-top-card-color: var(--first-color);
   --box-shadow-color: var(--grey-400);
+  --danger-color: var(--third-color-dark);
 }
 
 html[data-theme="dark"] {
@@ -98,9 +101,10 @@ html[data-theme="dark"] {
   --nav-bg: transparent;
   --content-bg : var(--blue-700);
   --card-bg: var(--blue-700);
-  --border-card : var(--grey-700);
+  --border-card : var(--blue-700);
   --border-top-card-color: var(--blue-800);
   --box-shadow-color: var(--grey-700);
+  --danger-color: var(--fourth-color-dark);
 }
 
 h1, h2, h3, h4, h5 {
@@ -123,6 +127,10 @@ h2{
 }
 h3{
   font-size: var(--h3-font-size);
+  font-weight: 500;
+}
+h4{
+  font-size: var(--h4-font-size);
   font-weight: 500;
 }
 

@@ -1,6 +1,6 @@
 .nav{
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
